@@ -1,0 +1,22 @@
+<section class="main-content">
+
+  <header>
+
+    <transition name="reveal-from-left">
+      <h1 v-if="!$store.state.loading">{{ current_location_content.city }}</h1>
+    </transition>
+
+    <transition name="reveal-from-right">
+      <h2 v-if="!$store.state.loading">{{ current_location_content.country }}</h2>
+    </transition>
+
+  </header>
+
+  <transition name="fade">
+    <article  v-if="!$store.state.loading" v-html="current_location_content.content"></article>
+  </transition>
+
+
+
+</section>
+

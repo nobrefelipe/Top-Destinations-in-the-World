@@ -1,0 +1,73 @@
+.navigation {
+
+  display: flex;
+
+  flex-direction: column;
+
+  width: 100%;
+
+  max-width: 1210px;
+
+  // align it to the bottom (parent is a flex container)
+  margin-top: auto;
+
+
+  h2{
+
+    font-size: 16px;
+
+    color: #fff;
+
+    font-weight: 300;
+
+    margin: 0 0 20px 0;
+
+  }
+
+
+  nav{
+
+    a{
+
+      font-size: 22px;
+
+      text-transform: uppercase;
+
+      text-decoration: none;
+
+      color: rgba(255,255,255,0.4);
+
+      transition: all .3s ease-in;
+
+      margin-right: 5vw;
+
+
+      &:hover,
+      &.active{
+
+        color: rgba(255,255,255,1);
+
+      }
+
+    }
+
+  }
+
+
+  @media all and (max-width: 800px){
+
+    padding: 0 20px;
+
+    nav{
+
+      a{
+
+        font-size: 15px;
+
+      }
+
+    }
+
+  }
+
+}

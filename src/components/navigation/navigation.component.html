@@ -1,0 +1,12 @@
+<section class="navigation">
+
+  <h2>Top destinations in  the world</h2>
+
+  <nav @click="getLocation($event)">
+
+    <a v-for="(item, index) in cities" href="#" :title="item.city" :data-destination="item.city | trim" class="nav-links">{{ item.city }}</a>
+
+  </nav>
+
+</section>
+

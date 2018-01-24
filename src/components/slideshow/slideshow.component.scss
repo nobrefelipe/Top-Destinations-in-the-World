@@ -1,0 +1,79 @@
+.slideshow {
+
+  .gallery-top{
+
+    height: 300px;
+
+  }
+
+  .swiper-slide {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    img{
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      transition: all .5s ease;
+
+      filter: contrast(110%); // add a little contrast to the images, as them are quite flat
+
+    }
+
+  }
+
+  .gallery-thumbs{
+
+    padding: 10px;
+
+    .swiper-wrapper{
+
+      overflow: hidden;
+
+    }
+
+
+    .swiper-slide {
+
+      height: 80px;
+
+      overflow: hidden;
+
+
+      @media all and (max-width: 1210px){
+
+        height: 60px;
+
+      }
+
+    }
+
+
+    @media all and (max-width: 724px){
+
+      display: none;
+
+    }
+
+  }
+
+
+  .fade-enter {
+    opacity: 0;
+  }
+
+  .fade-leave-active {
+    opacity: 0;
+  }
+
+}

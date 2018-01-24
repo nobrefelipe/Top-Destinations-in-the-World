@@ -1,0 +1,53 @@
+<section class="slideshow">
+
+    <!--
+        VUE AWESOME SWIPER : https://surmon-china.github.io/vue-awesome-swiper/
+
+        For simplicity the slide's images are coming from the current(destination) folder
+        TODO: get the images from a bucket
+    -->
+
+
+        <!-- SWIPER -->
+        <swiper :options="swiperOptionTop" class="gallery-top" ref="swiperTop" >
+
+
+            <!-- MAIN -->
+            <swiper-slide v-for="(item, index) in slides[0]"  :key="item" :class="'slide-' + index">
+
+                <transition name="fade">
+
+                    <img :src="'/src/assets/' + current_folder + '/slides/' + index + '.jpg'" alt=""  v-if="!$store.state.loading">
+
+                </transition>
+
+            </swiper-slide>
+
+            <!-- ARROWS -->
+            <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
+
+            <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
+
+        </swiper>
+
+
+        <!-- THUMBS -->
+        <swiper :options="swiperOptionThumbs" class="gallery-thumbs" ref="swiperThumbs">
+
+            <swiper-slide v-for="(item, index) in slides[0]":key="item"  :class="'slide-' + index">
+
+                <transition name="fade">
+
+                    <img :src="'/src/assets/' + current_folder + '/slides/' + index + '.jpg'" alt=""  v-if="!$store.state.loading">
+
+                </transition>
+
+            </swiper-slide>
+
+        </swiper>
+
+
+
+
+</section>
+

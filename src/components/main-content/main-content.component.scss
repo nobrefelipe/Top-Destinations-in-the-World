@@ -1,0 +1,180 @@
+.main-content {
+
+  float: left;
+
+  width: 50%;
+
+  min-height: 350px;
+
+  padding-right: 50px;
+
+  color: #fff;
+
+
+  header{
+
+    float: left;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    margin-bottom: 30px;
+
+    h1, h2{transition: all 0.4s cubic-bezier(.21,.98,.21,.99);}
+
+
+    h1{
+
+      font-size: 30px;
+
+      font-weight: 400;
+
+      text-transform: uppercase;
+
+      margin: 0 15px 0 0;
+
+      line-height: 1;
+
+    }
+
+    h2{
+
+      font-size: 18px;
+
+      font-weight: 300;
+
+      text-transform: uppercase;
+
+      margin: 0;
+
+      line-height: 1.2;
+
+      opacity: 0.5;
+
+    }
+
+  }
+
+
+  article{
+
+    float: left;
+
+    width: 100%;
+
+    max-height: 280px;
+
+    overflow-x: hidden;
+
+    font-size: 19px;
+
+    letter-spacing: 1px;
+
+    line-height: 25px;
+
+    transition: opacity 0.4s ease;
+
+    @media all and (max-width: 1210px){
+
+      font-size: 15px;
+
+      line-height: 20px;
+
+    }
+
+
+    @media all and (max-width: 800px){
+
+      font-size: 19px;
+
+      line-height: 25px;
+
+      margin-bottom: 40px;
+
+    }
+
+
+    p{
+
+      margin: 0 0 30px 0;
+
+      opacity: 0.7;
+
+    }
+
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 2px;
+      border-radius: 5px;
+
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.2);
+    }
+
+  }
+
+
+
+  @media all and (max-width: 800px){
+
+    width: 100%;
+
+    color: #333;
+
+    padding-right: 0;
+
+    article{
+
+      max-height: 9999px;
+
+    }
+
+  }
+
+
+  //============== TRANSITIONS
+
+
+  .fade-enter {
+    opacity: 0;
+  }
+
+  .fade-leave-active {
+    opacity: 0;
+  }
+
+
+  // in from left /  out to left
+  .reveal-from-left-enter {
+    transform: translateX(-10px);
+    opacity: 0;
+    filter: blur(3px);
+  }
+
+  .reveal-from-left-leave-active {
+    transform: translateX(-10px);
+    opacity: 0;
+    filter: blur(3px);
+  }
+
+  // in from right /  out to right
+  .reveal-from-right-enter {
+    transform: translateX(10px);
+    opacity: 0;
+    filter: blur(3px);
+  }
+
+  .reveal-from-right-leave-active {
+    transform: translateX(10px);
+    opacity: 0;
+    filter: blur(3px);
+  }
+
+}
