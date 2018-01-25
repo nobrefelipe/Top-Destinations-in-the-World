@@ -48,11 +48,13 @@
 
     float: left;
 
-    width: calc( 100% - 10px);
+    width: 100%;
 
     padding: 20px 10px;
 
     margin-bottom: 20px;
+
+    margin-top: 10px;
 
     white-space: nowrap;
 
@@ -87,7 +89,6 @@
 
     @media all and (max-width: 724px){
 
-      width: 100%;
 
       a{
 
